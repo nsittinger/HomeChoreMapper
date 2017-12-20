@@ -1,0 +1,24 @@
+﻿@using HomeChoreMapper.Models;
+@model LogInViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    @Html.Label("Username", "Enter your username")
+    @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "Username" })
+    @Html.ValidationMessageFor(m => m.Username)
+
+    @Html.Label("Homename", "Enter your Home Name")
+    @Html.TextBoxFor(m => m.Homename, new { @class = "form-control", placeholder = "Home Name" })
+    @Html.ValidationMessageFor(m => m.Homename)
+
+    @Html.Label("Password", "Enter your password")
+    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+    @Html.ValidationMessageFor(m => m.Password)
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}

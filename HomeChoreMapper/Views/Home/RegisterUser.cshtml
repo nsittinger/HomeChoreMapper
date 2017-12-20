@@ -1,0 +1,32 @@
+﻿@using HomeChoreMapper.Models;
+@model NewUserViewModel
+@{
+    ViewBag.Title = "RegisterUser";
+}
+
+<h2>RegisterUser</h2>
+
+@using (Html.BeginForm("RegisterUser", "Home", FormMethod.Post))
+{
+    @Html.Label("Username", "Enter your username")
+    @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "username" })
+    @Html.ValidationMessageFor(m => m.Username)
+
+    @Html.Label("Email", "Enter your Email")
+    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
+    @Html.ValidationMessageFor(m => m.Email)
+
+    @Html.Label("Homename", "Enter your Home Name")
+    @Html.TextBoxFor(m => m.Homename, new { @class = "form-control", placeholder = "Home name" })
+    @Html.ValidationMessageFor(m => m.Homename)
+
+    @Html.Label("Password", "Enter your Password")
+    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Password" })
+    @Html.ValidationMessageFor(m => m.Password)
+
+    @Html.Label("ConfirmPassword", "Re-Enter your Password")
+    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", placeholder = "Re-Enter Password" })
+    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+};

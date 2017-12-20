@@ -1,0 +1,26 @@
+﻿@using HomeChoreMapper.Models.Data;
+@model CompletedHUC
+@{
+    ViewBag.Title = "AddCompletedChore";
+}
+
+<h2>AddCompletedChore</h2>
+
+@using (Html.BeginForm("AddCompletedChore", "Main", FormMethod.Post))
+{
+    List<Chore> choreList = (List<Chore>)Session["ChoreList"];
+    List<SelectListItem> SLIList = new List<SelectListItem>();
+
+    foreach (Chore chore in choreList)
+    {
+        SLIList.Add(new SelectListItem() { Text = chore.Chorename, Value = chore.Chorename });
+    }
+
+    @Html.LabelFor(m => m.Chorename, "Chorename")
+    @Html.DropDownList("Chorename", SLIList)
+
+    @Html.LabelFor(m => m.Comments, "Comments")
+    @Html.TextBoxFor(m => m.Comments, new { placeholder = "comments" })
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}

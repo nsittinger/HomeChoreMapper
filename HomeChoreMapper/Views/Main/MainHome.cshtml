@@ -1,0 +1,18 @@
+﻿@using HomeChoreMapper.Models.Data;
+@model List<HomesUsersChores>
+@{
+    ViewBag.Title = "MainHome";
+}
+
+<h2>Hello @Session["Username"]</h2>
+
+@foreach (HomesUsersChores HUC in Model)
+{
+<div class="form-group">
+    @Html.DisplayFor(m => HUC.Username)
+    @Html.DisplayFor(m => HUC.Chorename)
+    @Html.DisplayFor(m => HUC.DateCompleted)
+    @Html.DisplayFor(m => HUC.Comments)
+</div>
+}
+

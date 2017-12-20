@@ -1,0 +1,16 @@
+﻿@using HomeChoreMapper.Models.Data;
+@model Home
+@{
+    ViewBag.Title = "RegisterHome";
+}
+
+<h2>RegisterHome</h2>
+
+@using (Html.BeginForm("RegisterHome", "Home", FormMethod.Post))
+{
+    @Html.Label("Homename", "Enter the new Home Name")
+    @Html.TextBoxFor(m => m.Homename, new { @class = "form-control", placeholder = "enter new Home Name" })
+    @Html.ValidationMessageFor(m => m.Homename)
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+}
