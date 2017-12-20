@@ -26,11 +26,4 @@ INSERT INTO chores VALUES ('Guest Shower', 'Monthly', null, 0);
 INSERT INTO chores VALUES ('Refrigerator', 'Monthly', 'Clean out old food', 0);
 INSERT INTO chores VALUES ('Bed Sheets', 'Monthly', 'Wash bed sheets', 0);
 
-INSERT INTO homes_users_chores VALUES(112, 1, 'Rocky''s Crib', 1, 'RockyTop', 2, 'Load Dishwasher', '2017/12/13', 'meow')
-INSERT INTO homes_users_chores VALUES(113, 1, 'Rocky''s Crib', 1, 'RockyTop', 3, 'Run Dishwasher', '2017/12/13', 'meow')
-INSERT INTO homes_users_chores VALUES(114, 1, 'Rocky''s Crib', 1, 'RockyTop', 4, 'Unload Dishwasher', '2017/12/13', 'meow')
-INSERT INTO homes_users_chores VALUES(125, 1, 'Rocky''s Crib', 2, 'Claire', 5, 'Kitchen Counters', '2017/12/13', 'all clean!')
-INSERT INTO homes_users_chores VALUES(1310, 1, 'Rocky''s Crib', 3, 'Nick14', 10, 'Guest Bathroom', '2017/12/13', 'all clean!')
-INSERT INTO homes_users_chores VALUES(139, 1, 'Rocky''s Crib', 3, 'Nick14', 9, 'Master Bathroom', '2017/12/13', 'meow')
-
 COMMIT;
